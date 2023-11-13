@@ -30,27 +30,28 @@
 
 @font-face {
     font-family: "Source Sans 3";
-    src: url(../fonts/SourceSans3Regular.woff2) format("woff2");
+    src: url(https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap) format("woff2");
     font-weight: 400;
     font-display: swap;
-    font-style: normal
+    font-style: normal;
 }
 
 @font-face {
     font-family: "Source Sans 3";
-    src: url(../fonts/SourceSans3SemiBold.woff2) format("woff2");
+    src: url(https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@600&display=swap) format("woff2");
     font-weight: 600;
     font-display: swap;
-    font-style: normal
+    font-style: normal;
 }
 
 @font-face {
     font-family: "Source Sans 3";
-    src: url(../fonts/SourceSans3Bold.woff2) format("woff2");
+    src: url(https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@700&display=swap) format("woff2");
     font-weight: 700;
     font-display: swap;
-    font-style: normal
+    font-style: normal;
 }
+
 
 html {
     -webkit-box-sizing: border-box;

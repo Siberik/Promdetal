@@ -1,23 +1,31 @@
+<?php
+
+use app\assets\AppAsset;
+use yii\helpers\Html;
+AppAsset::register($this);
+?>
+<?php $this->beginPage() ?>
+
 <!DOCTYPE html>
-<html lang="ru" class="page">
+<html lang="<?= Yii::$app->language ?>">
 
 <head>
-	<meta charset="UTF-8">
+<meta charset="<?= Yii::$app->charset ?>">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<title><?= Html::encode($this->title) ?></title>
+	
+
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="theme-color" content="#111111">
-	<title>Промдеталь</title>
-	<link rel="preload" href="fonts/SourceSans3Regular.woff2" as="font" type="font/woff2" crossorigin="">
-	<link rel="preload" href="fonts/SourceSans3SemiBold.woff2" as="font" type="font/woff2" crossorigin="">
-	<link rel="preload" href="fonts/SourceSans3Bold.woff2" as="font" type="font/woff2" crossorigin="">
-	<link rel="stylesheet" href="css/vendor.css">
-	<link rel="stylesheet" href="css/main.css">
-	<script defer="defer" src="js/main.js"></script>
+	<?php $this->registerCsrfMetaTags() ?>
+	
+    <?php $this->head() ?>
+	
 </head>
 
 <body class="page__body">
-	
+<?php $this->beginBody() ?>
 	<div class="site-container">
 	
 		<main class="main">
@@ -151,6 +159,8 @@
 			</div>
 		</footer>
 	</div>
+	<?php $this->endBody() ?>
 </body>
 
 </html>
+<?php $this->endPage() ?>
