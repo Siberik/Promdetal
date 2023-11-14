@@ -10,6 +10,7 @@ $config = [
     'layout' => 'laser',
     'name' => 'Промдеталь',
     'language' => 'ru',
+    'defaultRoute' => 'laser/index',
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
