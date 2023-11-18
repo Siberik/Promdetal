@@ -43,7 +43,7 @@ $this->title = Yii::$app->name;
 								<h3 class="products-card__title">Датчики давления</h3><a href="#" class="products-card__link">Подробнее <svg><use xlink:href="/images/sprite.svg#angle"></use></svg></a></div>
 						</li>
 						<li class="products__item">
-							<div class="products-card"><img src="/images/3.png" srcset="/images/3_2x.png 2x" alt="ПИД-регуляторы" width="200" loading="lazy" class="products-card__image">
+							<div class="products-card"><img src="images/3.png" srcset="/images/3_2x.png 2x" alt="ПИД-регуляторы" width="200" loading="lazy" class="products-card__image">
 								<h3 class="products-card__title">ПИД-регуляторы</h3><a href="#" class="products-card__link">Подробнее <svg><use xlink:href="/images/sprite.svg#angle"></use></svg></a></div>
 						</li>
 						<li class="products__item">

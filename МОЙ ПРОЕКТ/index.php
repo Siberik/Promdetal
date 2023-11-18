@@ -8,9 +8,9 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="theme-color" content="#111111">
 	<title>Промдеталь</title>
-	<link rel="preload" href="fonts/SourceSans3Regular.woff2" as="font" type="font/woff2" crossorigin="">
-	<link rel="preload" href="fonts/SourceSans3SemiBold.woff2" as="font" type="font/woff2" crossorigin="">
-	<link rel="preload" href="fonts/SourceSans3Bold.woff2" as="font" type="font/woff2" crossorigin="">
+	<link rel="preload" href="fonts/SourceSans3Regular.woff2" as="font" type="text/css" crossorigin="">
+	<link rel="preload" href="fonts/SourceSans3SemiBold.woff2" as="font" type="text/css" crossorigin="">
+	<link rel="preload" href="fonts/SourceSans3Bold.woff2" as="font" type="text/css" crossorigin="">
 	<link rel="stylesheet" href="css/vendor.css">
 	<link rel="stylesheet" href="css/main.css">
 	<script defer="defer" src="js/main.js"></script>

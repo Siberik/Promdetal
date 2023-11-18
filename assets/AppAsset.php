@@ -12,9 +12,7 @@ class AppAsset extends AssetBundle
     public $css = [
         'css/vendor.css',
         'css/main.css',
-        'https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap',
-        'https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@600&display=swap',
-        'https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@700&display=swap',
+      
     ];
     public $js = [
         'js/main.js',
