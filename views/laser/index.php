@@ -12,7 +12,7 @@ $this->title = Yii::$app->name;
 					<div class="hero__top grid">
 						<h1 class="hero__title">Промдеталь</h1>
 						<p class="hero__descr">Компания «Промдеталь» предоставляет услуги по резке и промышленной гравировке изделий из металла и других материалов с применением лазерных технологий в Екатеринбурге.</p>
-					</div><img src="images/hero.jpg" srcset="images/hero_2x.jpg 2x" alt="Промдеталь - предприятие лазерной резки" width="1180" height="440" class="hero__image"></div>
+					</div><img src="/images/hero.jpg" srcset="/images/hero_2x.jpg 2x" alt="Промдеталь - предприятие лазерной резки" width="1180" height="440" class="hero__image"></div>
 			</section>
 			<section class="about section-offset">
 				<div class="container">
@@ -23,9 +23,9 @@ $this->title = Yii::$app->name;
 						<p class="about__descr">Для этого имеется современное оборудование швейцарской фирмы «Bystronic», станок Bystar 3015, позволяющий обрабатывать не только плоские заготовки, но и быстро обрабатывать объемные детали, в частности круглые трубы. Даже при лазерной резке толстых листовых материалов обеспечивается первоклассные параметры с минимальными временными затратами и экономией материала.</p>
 					</div>
 					<div class="about__images grid">
-            <img src="images/laser-1.jpg" srcset="images/about-1_2x.jpg 2x" loading="lazy" alt="Лазерная резка 1" width="520" height="180" class="about__image"> 
+            <img src="/images/laser-1.jpg" srcset="/images/about-1_2x.jpg 2x" loading="lazy" alt="Лазерная резка 1" width="520" height="180" class="about__image"> 
             
-            <img src="images/laser-2.jpg" srcset="images/about-2_2x.jpg 2x" loading="lazy" overflow="hidden" alt="Лазерная резка 2" width="520" height="180" class="about__image">
+            <img src="/images/laser-2.jpg" srcset="/images/about-2_2x.jpg 2x" loading="lazy" overflow="hidden" alt="Лазерная резка 2" width="520" height="180" class="about__image">
           
           </div>
 				</div>
@@ -35,28 +35,28 @@ $this->title = Yii::$app->name;
 					<h2 class="section-title">Продукция</h2>
 					<ul class="list-reset products__list grid">
 						<li class="products__item">
-							<div class="products-card"><img src="images/1.png" srcset="images/1_2x.png 2x" alt="Сигнализатор уровня" width="200" loading="lazy" class="products-card__image">
-								<h3 class="products-card__title">Сигнализатор уровня</h3><a href="#" class="products-card__link">Подробнее <svg><use xlink:href="images/sprite.svg#angle"></use></svg></a></div>
+							<div class="products-card"><img src="/images/1.png" srcset="/images/1_2x.png 2x" alt="Сигнализатор уровня" width="200" loading="lazy" class="products-card__image">
+								<h3 class="products-card__title">Сигнализатор уровня</h3><a href="#" class="products-card__link">Подробнее <svg><use xlink:href="/images/sprite.svg#angle"></use></svg></a></div>
 						</li>
 						<li class="products__item">
-							<div class="products-card"><img src="images/2.png" srcset="images/2_2x.png 2x" alt="Датчики давления" width="200" loading="lazy" class="products-card__image">
-								<h3 class="products-card__title">Датчики давления</h3><a href="#" class="products-card__link">Подробнее <svg><use xlink:href="images/sprite.svg#angle"></use></svg></a></div>
+							<div class="products-card"><img src="/images/2.png" srcset="/images/2_2x.png 2x" alt="Датчики давления" width="200" loading="lazy" class="products-card__image">
+								<h3 class="products-card__title">Датчики давления</h3><a href="#" class="products-card__link">Подробнее <svg><use xlink:href="/images/sprite.svg#angle"></use></svg></a></div>
 						</li>
 						<li class="products__item">
-							<div class="products-card"><img src="images/3.png" srcset="images/3_2x.png 2x" alt="ПИД-регуляторы" width="200" loading="lazy" class="products-card__image">
-								<h3 class="products-card__title">ПИД-регуляторы</h3><a href="#" class="products-card__link">Подробнее <svg><use xlink:href="images/sprite.svg#angle"></use></svg></a></div>
+							<div class="products-card"><img src="/images/3.png" srcset="/images/3_2x.png 2x" alt="ПИД-регуляторы" width="200" loading="lazy" class="products-card__image">
+								<h3 class="products-card__title">ПИД-регуляторы</h3><a href="#" class="products-card__link">Подробнее <svg><use xlink:href="/images/sprite.svg#angle"></use></svg></a></div>
 						</li>
 						<li class="products__item">
-							<div class="products-card"><img src="images/4.png" srcset="images/4_2x.png 2x" alt="Калибратор давления" width="200" loading="lazy" class="products-card__image">
-								<h3 class="products-card__title">Калибратор давления</h3><a href="#" class="products-card__link">Подробнее <svg><use xlink:href="images/sprite.svg#angle"></use></svg></a></div>
+							<div class="products-card"><img src="/images/4.png" srcset="/images/4_2x.png 2x" alt="Калибратор давления" width="200" loading="lazy" class="products-card__image">
+								<h3 class="products-card__title">Калибратор давления</h3><a href="#" class="products-card__link">Подробнее <svg><use xlink:href="/images/sprite.svg#angle"></use></svg></a></div>
 						</li>
 						<li class="products__item">
-							<div class="products-card"><img src="images/5.png" srcset="images/5_2x.png 2x" alt="Корректор расхода газа" width="200" loading="lazy" class="products-card__image">
-								<h3 class="products-card__title">Корректор расхода газа</h3><a href="#" class="products-card__link">Подробнее <svg><use xlink:href="images/sprite.svg#angle"></use></svg></a></div>
+							<div class="products-card"><img src="/images/5.png" srcset="/images/5_2x.png 2x" alt="Корректор расхода газа" width="200" loading="lazy" class="products-card__image">
+								<h3 class="products-card__title">Корректор расхода газа</h3><a href="#" class="products-card__link">Подробнее <svg><use xlink:href="/images/sprite.svg#angle"></use></svg></a></div>
 						</li>
 						<li class="products__item">
-							<div class="products-card"><img src="images/6.png" srcset="images/6_2x.png 2x" alt="Манометры" width="200" loading="lazy" class="products-card__image">
-								<h3 class="products-card__title">Манометры</h3><a href="#" class="products-card__link">Подробнее <svg><use xlink:href="images/sprite.svg#angle"></use></svg></a></div>
+							<div class="products-card"><img src="/images/6.png" srcset="images/6_2x.png 2x" alt="Манометры" width="200" loading="lazy" class="products-card__image">
+								<h3 class="products-card__title">Манометры</h3><a href="#" class="products-card__link">Подробнее <svg><use xlink:href="/images/sprite.svg#angle"></use></svg></a></div>
 						</li>
 					</ul>
 				</div>
@@ -70,11 +70,11 @@ $this->title = Yii::$app->name;
 			<section class="news section-offset">
 				<div class="container">
 					<h2 class="section-title">Новости</h2>
-					<div class="news-wrapper"><button class="btn-reset news-btn news-btn--prev"><svg><use xlink:href="images/sprite.svg#left"></use></svg></button>
+					<div class="news-wrapper"><button class="btn-reset news-btn news-btn--prev"><svg><use xlink:href="/images/sprite.svg#left"></use></svg></button>
 						<div class="news-slider swiper">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
-									<article class="news-card"><img src="images/news-1.jpg" srcset="images/news-1_2x.jpg 2x" loading="lazy" width="380" height="251" alt="Новость 1" class="news-card__image">
+									<article class="news-card"><img src="/images/news-1.jpg" srcset="/images/news-1_2x.jpg 2x" loading="lazy" width="380" height="251" alt="Новость 1" class="news-card__image">
 										<div class="news-card__inner">
 											<h3 class="news-card__title">"Промдеталь"&nbsp;» подтвердило свои компетенции в &nbsp;области консультирования и &nbsp;изготовления…</h3>
 											<div class="news-card__bottom"><a href="#" class="news-card__link">Читать далее</a> <time class="news-card__date" datetime="2023-07-20">20.07.2023</time></div>
@@ -82,7 +82,7 @@ $this->title = Yii::$app->name;
 									</article>
 								</div>
 								<div class="swiper-slide">
-									<article class="news-card"><img src="images/news-2.jpg" srcset="images/news-2_2x.jpg 2x" loading="lazy" width="380" height="251" alt="Новость 2" class="news-card__image">
+									<article class="news-card"><img src="/images/news-2.jpg" srcset="/images/news-2_2x.jpg 2x" loading="lazy" width="380" height="251" alt="Новость 2" class="news-card__image">
 										<div class="news-card__inner">
 											<h3 class="news-card__title">Поздравляем коллектив регионального представительства «Промдеталь&nbsp;» с &nbsp;праздником!</h3>
 											<div class="news-card__bottom"><a href="#" class="news-card__link">Читать далее</a> <time class="news-card__date" datetime="2024-07-18">18.07.2023</time></div>
@@ -90,7 +90,7 @@ $this->title = Yii::$app->name;
 									</article>
 								</div>
 								<div class="swiper-slide">
-									<article class="news-card"><img src="images/news-3.jpg" srcset="images/news-3_2x.jpg 2x" loading="lazy" width="380" height="251" alt="Новость 3" class="news-card__image">
+									<article class="news-card"><img src="/images/news-3.jpg" srcset="/images/news-3_2x.jpg 2x" loading="lazy" width="380" height="251" alt="Новость 3" class="news-card__image">
 										<div class="news-card__inner">
 											<h3 class="news-card__title">Перенос сроков проведения запланированных работ в 2023 году</h3>
 											<div class="news-card__bottom"><a href="#" class="news-card__link">Читать далее</a> <time class="news-card__date" datetime="2024-06-20">20.06.2023</time></div>
@@ -98,7 +98,7 @@ $this->title = Yii::$app->name;
 									</article>
 								</div>
 								<div class="swiper-slide">
-									<article class="news-card"><img src="images/news-3.jpg" srcset="images/news-3_2x.jpg 2x" loading="lazy" width="380" height="251" alt="Новость 3" class="news-card__image">
+									<article class="news-card"><img src="/images/news-3.jpg" srcset="/images/news-3_2x.jpg 2x" loading="lazy" width="380" height="251" alt="Новость 3" class="news-card__image">
 										<div class="news-card__inner">
 											<h3 class="news-card__title">Перенос сроков проведения запланированных работ в 2023 году</h3>
 											<div class="news-card__bottom"><a href="#" class="news-card__link">Читать далее</a> <time class="news-card__date" datetime="2023-06-20">20.06.2023</time></div>
@@ -106,9 +106,9 @@ $this->title = Yii::$app->name;
 									</article>
 								</div>
 							</div>
-						</div><button class="btn-reset news-btn news-btn--next"><svg><use xlink:href="images/sprite.svg#right"></use></svg></button></div>
+						</div><button class="btn-reset news-btn news-btn--next"><svg><use xlink:href="/images/sprite.svg#right"></use></svg></button></div>
 			
 				</div>
 			</section>
 		</main>
-		<footer c
+		<footer>
