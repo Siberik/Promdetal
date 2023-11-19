@@ -11,7 +11,7 @@ $this->title = Yii::$app->name;
 				<div class="container">
 					<div class="hero__top grid">
 						<h1 class="hero__title">Промдеталь</h1>
-						<p class="hero__descr">Компания «Промдеталь» предоставляет услуги по резке и промышленной гравировке изделий из металла и других материалов с применением лазерных технологий в Екатеринбурге.</p>
+						<p class="hero__descr">Компания «Промдеталь» предоставляет услуги по резке и промышленной гравировке изделий из металла и других материалов с применением лазерных технологий по всей стране.</p>
 					</div><img src="/images/hero.jpg" srcset="/images/hero_2x.jpg 2x" alt="Промдеталь - предприятие лазерной резки" width="1180" height="440" class="hero__image"></div>
 			</section>
 			<section class="about section-offset">

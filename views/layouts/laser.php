@@ -30,7 +30,7 @@ AppAsset::register($this);
 <body class="page__body">
 <?php $this->beginBody() ?>
 <header class="header">
-	
+
 
 			<div class="container">
 			<div class="header__top"><a href="/laser/index.php" class="logo header__logo"><img src="/web/images/logo.png" alt="Логотип" width="138" height="38"></a>
