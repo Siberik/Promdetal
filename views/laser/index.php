@@ -5,7 +5,7 @@
 $this->title = Yii::$app->name;
 ?>
 
-<?php var_dump($blog); ?>
+<?php // var_dump($blog); ?>
 <main class="main">
 			<section class="hero section-offset">
 				<div class="container">

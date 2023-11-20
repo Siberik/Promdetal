@@ -134,15 +134,15 @@
         <div class="container_segment">
 
             <div class="row">
-                <h2 class="title_us">Наши сосалы</h2>
+                <h2 class="title_us">Управляющие</h2>
                 <div class="col-md-4 col-sm-6">
                     <div class="our-team">
                         <div class="team-img">
                             <img src="https://n1s1.hsmedia.ru/aa/e0/9d/aae09d118ee5c3d38adaa4b41fe64ebf/617x540_1_031579db22404e4c384057a436df1770@986x863_0xac120004_18784161701688063759.jpeg">
                         </div>
                         <div class="team-content">
-                            <h3 class="name">Пидораска Олеговна</h3>
-                            <span class="post">Директору сосала</span>
+                            <h3 class="name">Евгения Журавлёва</h3>
+                            <span class="post">Директор</span>
                         </div>
 
                     </div>
@@ -154,8 +154,8 @@
                             <img src="https://masterpiecer-images.s3.yandex.net/a0ee3eb16abb11ee8675b646b2a0ffc1:upscaled">
                         </div>
                         <div class="team-content">
-                            <h3 class="name">Сучка Альбертовна</h3>
-                            <span class="post">Козу ебала</span>
+                            <h3 class="name">София Ковалевская</h3>
+                            <span class="post">Заместитель директора</span>
                         </div>
 
                     </div>
@@ -167,8 +167,8 @@
                             <img src="https://intrigue.dating/wp-content/cache/thumb/11/442463fbd700f11_350x0.jpg">
                         </div>
                         <div class="team-content">
-                            <h3 class="name">Стелла Еблановна</h3>
-                            <span class="post">В спагетти насрала</span>
+                            <h3 class="name">Валерия Рябинина</h3>
+                            <span class="post">Заместитель директора по продвижению</span>
                         </div>
 
                     </div>
