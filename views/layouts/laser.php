@@ -1,8 +1,10 @@
 <?php
 
 use app\assets\AppAsset;
+use app\assets\CustomFontAsset;
 use yii\helpers\Html;
 AppAsset::register($this);
+CustomFontAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 
@@ -14,14 +16,12 @@ AppAsset::register($this);
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<title><?= Html::encode($this->title) ?></title>
-	
+
 
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="theme-color" content="#111111">
 	<?php $this->registerCsrfMetaTags() ?>
-	<link rel="preload" href="http://promdetal/web/fonts/SourceSans3Regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="http://promdetal/web/fonts/SourceSans3SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="http://promdetal/web/fonts/SourceSans3Bold.woff2" as="font" type="font/woff2" crossorigin>
+	
 
     <?php $this->head() ?>
 	

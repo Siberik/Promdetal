@@ -101,7 +101,7 @@
             transition: 0.6s ease 0s;
         }
 
-        .our-team:hover .team-content .post {
+        
 
 
     </style>

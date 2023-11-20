@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Basic';
+    src: url('../fonts/SourceSans3Bold.woff2') format('woff2');
+   
+}
+
+@font-face {
+    font-family: 'Addble';
+    src: 
+         url('../fonts/SourceSans3Regular.woff2') format('woff2');
+        
+   
+}
+@font-face {
+    font-family: 'Main';
+    src: 
+    url('../fonts/SourceSans3SemiBold.woff2') format('woff2');
+        
+   
+}
