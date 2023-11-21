@@ -5,7 +5,7 @@
 $this->title = Yii::$app->name;
 ?>
 
-<?php // var_dump($blog); ?>
+
 <main class="main">
 			<section class="hero section-offset">
 				<div class="container">
@@ -73,38 +73,23 @@ $this->title = Yii::$app->name;
 					<div class="news-wrapper"><button class="btn-reset news-btn news-btn--prev"><svg><use xlink:href="/images/sprite.svg#left"></use></svg></button>
 						<div class="news-slider swiper">
 							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<article class="news-card"><img src="/images/news-1.jpg" srcset="/images/news-1_2x.jpg 2x" loading="lazy" width="380" height="251" alt="Новость 1" class="news-card__image">
-										<div class="news-card__inner">
-											<h3 class="news-card__title">"Промдеталь"&nbsp;» подтвердило свои компетенции в &nbsp;области консультирования и &nbsp;изготовления…</h3>
-											<div class="news-card__bottom"><a href="#" class="news-card__link">Читать далее</a> <time class="news-card__date" datetime="2023-07-20">20.07.2023</time></div>
-										</div>
-									</article>
-								</div>
-								<div class="swiper-slide">
-									<article class="news-card"><img src="/images/news-2.jpg" srcset="/images/news-2_2x.jpg 2x" loading="lazy" width="380" height="251" alt="Новость 2" class="news-card__image">
-										<div class="news-card__inner">
-											<h3 class="news-card__title">Поздравляем коллектив регионального представительства «Промдеталь&nbsp;» с &nbsp;праздником!</h3>
-											<div class="news-card__bottom"><a href="#" class="news-card__link">Читать далее</a> <time class="news-card__date" datetime="2024-07-18">18.07.2023</time></div>
-										</div>
-									</article>
-								</div>
-								<div class="swiper-slide">
-									<article class="news-card"><img src="/images/news-3.jpg" srcset="/images/news-3_2x.jpg 2x" loading="lazy" width="380" height="251" alt="Новость 3" class="news-card__image">
-										<div class="news-card__inner">
-											<h3 class="news-card__title">Перенос сроков проведения запланированных работ в 2023 году</h3>
-											<div class="news-card__bottom"><a href="#" class="news-card__link">Читать далее</a> <time class="news-card__date" datetime="2024-06-20">20.06.2023</time></div>
-										</div>
-									</article>
-								</div>
-								<div class="swiper-slide">
-									<article class="news-card"><img src="/images/news-3.jpg" srcset="/images/news-3_2x.jpg 2x" loading="lazy" width="380" height="251" alt="Новость 3" class="news-card__image">
-										<div class="news-card__inner">
-											<h3 class="news-card__title">Перенос сроков проведения запланированных работ в 2023 году</h3>
-											<div class="news-card__bottom"><a href="#" class="news-card__link">Читать далее</a> <time class="news-card__date" datetime="2023-06-20">20.06.2023</time></div>
-										</div>
-									</article>
-								</div>
+								
+								
+								
+							<?php foreach ($blogs as $blog): ?>
+    <div class="swiper-slide">
+        <article class="news-card">
+            <img src="/images/news-3.jpg" srcset="/images/news-3_2x.jpg 2x" loading="lazy" width="380" height="251" alt="Новость 3" class="news-card__image">
+            <div class="news-card__inner">
+                <h3 class="news-card__title"><?= $blog->name ?></h3>
+                <div class="news-card__bottom">
+                    <a href="<?= Yii::$app->urlManager->createUrl(['laser/view', 'id' => $blog->id]) ?>" class="news-card__link">Читать далее</a>
+                </div>
+            </div>
+        </article>
+    </div>
+<?php endforeach; ?>
+
 							</div>
 						</div><button class="btn-reset news-btn news-btn--next"><svg><use xlink:href="/images/sprite.svg#right"></use></svg></button></div>
 			
