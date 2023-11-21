@@ -12,7 +12,7 @@ $this->title = Yii::$app->name;
 					<div class="hero__top grid">
 						<h1 class="hero__title">Промдеталь</h1>
 						<p class="hero__descr">Компания «Промдеталь» предоставляет услуги по резке и промышленной гравировке изделий из металла и других материалов с применением лазерных технологий по всей стране.</p>
-					</div><img src="/images/hero.jpg" srcset="/images/hero_2x.jpg 2x" alt="Промдеталь - предприятие лазерной резки" width="1180" height="440" class="hero__image"></div>
+					</div><img src="https://promdetal-ek.ru/wp-content/uploads/2016/05/54851233_2-kopiya-1536x950-1.jpg" srcset="https://promdetal-ek.ru/wp-content/uploads/2016/05/54851233_2-kopiya-1536x950-1.jpg" alt="Промдеталь - предприятие лазерной резки" width="1180" height="440" class="hero__image"></div>
 			</section>
 			<section class="about section-offset">
 				<div class="container">
@@ -35,29 +35,26 @@ $this->title = Yii::$app->name;
 					<h2 class="section-title">Продукция</h2>
 					<ul class="list-reset products__list grid">
 						<li class="products__item">
-							<div class="products-card"><img src="/images/1.png" srcset="/images/1_2x.png 2x" alt="Сигнализатор уровня" width="200" loading="lazy" class="products-card__image">
-								<h3 class="products-card__title">Сигнализатор уровня</h3><a href="#" class="products-card__link">Подробнее <svg><use xlink:href="/images/sprite.svg#angle"></use></svg></a></div>
+							<div class="products-card"><img src="https://promdetal-ek.ru/wp-content/uploads/2020/12/1-fe-150x150.jpg" srcset="https://promdetal-ek.ru/wp-content/uploads/2020/12/1-fe-150x150.jpg" alt="Лазерная резка неметаллов" width="200" loading="lazy" class="products-card__image">
+								<h3 class="products-card__title">Лазерная резка металла</h3><a href="#" class="products-card__link">Подробнее <svg><use xlink:href="/images/sprite.svg#angle"></use></svg></a></div>
 						</li>
 						<li class="products__item">
-							<div class="products-card"><img src="/images/2.png" srcset="/images/2_2x.png 2x" alt="Датчики давления" width="200" loading="lazy" class="products-card__image">
-								<h3 class="products-card__title">Датчики давления</h3><a href="#" class="products-card__link">Подробнее <svg><use xlink:href="/images/sprite.svg#angle"></use></svg></a></div>
+							<div class="products-card"><img src="https://promdetal-ek.ru/wp-content/uploads/2020/12/1-fanera-150x150.jpg" srcset="https://promdetal-ek.ru/wp-content/uploads/2020/12/1-fanera-150x150.jpg" alt="Лазерная резка неметаллов" width="200" loading="lazy" class="products-card__image">
+								<h3 class="products-card__title">Лазерная резка неметаллов</h3><a href="#" class="products-card__link">Подробнее <svg><use xlink:href="/images/sprite.svg#angle"></use></svg></a></div>
 						</li>
 						<li class="products__item">
-							<div class="products-card"><img src="images/3.png" srcset="/images/3_2x.png 2x" alt="ПИД-регуляторы" width="200" loading="lazy" class="products-card__image">
-								<h3 class="products-card__title">ПИД-регуляторы</h3><a href="#" class="products-card__link">Подробнее <svg><use xlink:href="/images/sprite.svg#angle"></use></svg></a></div>
+							<div class="products-card"><img src="https://promdetal-ek.ru/wp-content/uploads/2020/12/2-truba-150x150.jpg" srcset="https://promdetal-ek.ru/wp-content/uploads/2020/12/2-truba-150x150.jpg" alt="Лазерная резка труб" width="200" loading="lazy" class="products-card__image">
+								<h3 class="products-card__title">Лазерная резка труб</h3><a href="#" class="products-card__link">Подробнее <svg><use xlink:href="/images/sprite.svg#angle"></use></svg></a></div>
 						</li>
 						<li class="products__item">
-							<div class="products-card"><img src="/images/4.png" srcset="/images/4_2x.png 2x" alt="Калибратор давления" width="200" loading="lazy" class="products-card__image">
-								<h3 class="products-card__title">Калибратор давления</h3><a href="#" class="products-card__link">Подробнее <svg><use xlink:href="/images/sprite.svg#angle"></use></svg></a></div>
+							<div class="products-card"><img src="https://promdetal-ek.ru/wp-content/uploads/2020/12/1-gravirovka-150x150.jpg" srcset="https://promdetal-ek.ru/wp-content/uploads/2020/12/1-gravirovka-150x150.jpg" alt="Лазерная гравировка" width="200" loading="lazy" class="products-card__image">
+								<h3 class="products-card__title">Лазерная гравировка</h3><a href="#" class="products-card__link">Подробнее <svg><use xlink:href="/images/sprite.svg#angle"></use></svg></a></div>
 						</li>
 						<li class="products__item">
-							<div class="products-card"><img src="/images/5.png" srcset="/images/5_2x.png 2x" alt="Корректор расхода газа" width="200" loading="lazy" class="products-card__image">
-								<h3 class="products-card__title">Корректор расхода газа</h3><a href="#" class="products-card__link">Подробнее <svg><use xlink:href="/images/sprite.svg#angle"></use></svg></a></div>
+							<div class="products-card"><img src="https://promdetal-ek.ru/wp-content/uploads/2020/12/1-gibka-150x150.jpg" srcset="https://promdetal-ek.ru/wp-content/uploads/2020/12/1-gibka-150x150.jpg" alt="Гибка" width="200" loading="lazy" class="products-card__image">
+								<h3 class="products-card__title">Гибка</h3><a href="#" class="products-card__link">Подробнее <svg><use xlink:href="/images/sprite.svg#angle"></use></svg></a></div>
 						</li>
-						<li class="products__item">
-							<div class="products-card"><img src="/images/6.png" srcset="images/6_2x.png 2x" alt="Манометры" width="200" loading="lazy" class="products-card__image">
-								<h3 class="products-card__title">Манометры</h3><a href="#" class="products-card__link">Подробнее <svg><use xlink:href="/images/sprite.svg#angle"></use></svg></a></div>
-						</li>
+					
 					</ul>
 				</div>
 			</section>
