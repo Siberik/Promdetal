@@ -3,6 +3,8 @@
 use app\assets\AppAsset;
 use app\assets\CustomFontAsset;
 use yii\helpers\Html;
+use yii\widgets\ActiveForm;
+
 AppAsset::register($this);
 CustomFontAsset::register($this);
 ?>

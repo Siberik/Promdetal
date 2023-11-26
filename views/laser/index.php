@@ -4,7 +4,47 @@
 
 $this->title = Yii::$app->name;
 ?>
+<?php
 
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
+use app\models\ApplicationForm;
+?>
+<style>
+    .laser-index {
+        text-align: center;
+        margin-top: 50px; /* Регулируйте отступ сверху по вашему усмотрению */
+    }
+
+    .page-title {
+        color: #333; /* Цвет заголовка */
+    }
+
+    .contact-form {
+        margin-top: 20px; /* Регулируйте отступ сверху формы по вашему усмотрению */
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .btn-primary {
+        background-color: #007bff; /* Основной цвет кнопки */
+        color: #fff; /* Цвет текста на кнопке */
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease; /* Анимация изменения цвета фона */
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3; /* Цвет фона при наведении курсора */
+    }
+
+</style>
 
 <main class="main">
 			<section class="hero section-offset">
@@ -89,8 +129,43 @@ $this->title = Yii::$app->name;
 
 							</div>
 						</div><button class="btn-reset news-btn news-btn--next"><svg><use xlink:href="/images/sprite.svg#right"></use></svg></button></div>
-			
-				</div>
-			</section>
+
+
+
+                    <div class="laser-index">
+                        <h1 class="page-title">Оставить заявку</h1>
+
+                        <?php if (!$formSubmitted): // Показываем форму только если она еще не была отправлена ?>
+                            <?php $form = ActiveForm::begin(['options' => ['class' => 'contact-form']]); ?>
+
+                            <?= $form->field($model, 'name')->textInput(['class' => 'form-control', 'placeholder' => 'Ваше имя']) ?>
+                            <?= $form->field($model, 'email')->textInput(['class' => 'form-control', 'placeholder' => 'Ваш Email']) ?>
+                            <?= $form->field($model, 'phone')->textInput(['class' => 'form-control', 'placeholder' => 'Ваш телефон']) ?>
+                            <?= $form->field($model, 'message')->textarea(['class' => 'form-control', 'rows' => 5, 'placeholder' => 'Ваше сообщение']) ?>
+
+                            <div class="form-group">
+                                <?= Html::submitButton('Отправить', ['class' => 'btn btn-primary', 'id' => 'submitBtn']) ?>
+                            </div>
+
+                            <?php ActiveForm::end(); ?>
+                        <?php else: // Показываем сообщение об успешной отправке ?>
+                            <div class="success-message">
+                                <p>Ваша заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.</p>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+
+                    <script>
+                        // Добавляем скрипт для скрытия формы после успешной отправки
+                        document.addEventListener("DOMContentLoaded", function () {
+                            var formSubmitted = <?= json_encode($formSubmitted) ?>;
+                            if (formSubmitted) {
+                                document.getElementById("submitBtn").style.display = "none";
+                            }
+                        });
+                    </script>
+
+
+
+            </section>
 		</main>
-		<footer>

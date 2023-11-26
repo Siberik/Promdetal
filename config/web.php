@@ -32,11 +32,25 @@ $config = [
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
-            // send all mails to a file by default. You have to set
-            // 'useFileTransport' to false and configure a transport
-            // for the mailer to send real emails.
-            'useFileTransport' => true,
+            'useFileTransport' => false,
+            'transport' => [
+                'class' => 'Swift_SmtpTransport',
+                'host' => 'smtp.yandex.ru',
+                'username' => 'lolbagg@yandex.ru',
+                'password' => 'ndydvtrvlfhfpjfm',
+                'port' => '465',
+                'encryption' => 'ssl',
+                'streamOptions' => ['ssl' => ['verify_peer' => false, 'verify_peer_name' => false]],
+            ],
+            'messageConfig' => [
+                'charset' => 'UTF-8',
+                'from' => ['lolbagg@yandex.ru' => 'Владислав'], // Update the email address
+            ],
         ],
+
+
+
+
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
@@ -53,12 +67,14 @@ $config = [
             'showScriptName' => false,
             'rules' => [
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+                'laser/application-form' => 'laser/application-form',
             ],
         ],
         
     ],
     'params' => $params,
-];
+
+    ];
 
 if (YII_ENV_DEV) {
     // configuration adjustments for 'dev' environment
