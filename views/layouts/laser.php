@@ -46,12 +46,8 @@ CustomFontAsset::register($this);
     <ul class="list-reset nav__list">
         <a class="nav__item"><a href="<?= Yii::$app->homeUrl ?>" class="nav__link">Главная</a></li>
         <li class="nav__item"><a href="<?= Yii::$app->urlManager->createUrl(['laser/company']) ?>" class="nav__link">О предприятии</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">Новости</a></li>
+        <li class="nav__item"><a href="<?= Yii::$app->homeUrl ?>#news"  class="nav__link">Новости</a></li>
         <li class="nav__item"><a href="#" class="nav__link">Продукция</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">Услуги</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">Поддержка</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">География поставок</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
     </ul>
 </nav>
 					<div class="header__contact header__contact--mobile"><span class="header__caption">По вопросам и предложениям</span> <a href="mailto:pionerrr@sila.ru" class="header__link">promdetail@sila.ru</a></div>
@@ -71,22 +67,31 @@ CustomFontAsset::register($this);
 							<li class="nav__item nav__item--footer"><a href="#" class="nav__link nav__link--footer">О предприятии</a></li>
 							<li class="nav__item nav__item--footer"><a href="#" class="nav__link nav__link--footer">Новости</a></li>
 							<li class="nav__item nav__item--footer"><a href="#" class="nav__link nav__link--footer">Продукция</a></li>
-							<li class="nav__item nav__item--footer"><a href="#" class="nav__link nav__link--footer">Услуги</a></li>
-							<li class="nav__item nav__item--footer"><a href="#" class="nav__link nav__link--footer">Поддержка</a></li>
-							<li class="nav__item nav__item--footer"><a href="#" class="nav__link nav__link--footer">География поставок</a></li>
-							<li class="nav__item nav__item--footer"><a href="#" class="nav__link nav__link--footer">Контакты</a></li>
+			
 						</ul>
 					</nav>
-					<ul class="list-reset footer__list">
-						<li class="footer__item"><a href="#" class="footer__link">Файлы</a></li>
-						<li class="footer__item"><a href="#" class="footer__link">Поддержка</a></li>
-						<li class="footer__item"><a href="#" class="footer__link">Политика конфеденциальности</a></li>
-					</ul>
+					
 				</div>
 				<div class="footer__col footer__col--full"><span class="footer__copyright">1994 &nbsp;— 2023 ООО &nbsp;«Промдеталь&nbsp;»</span></div>
 			</div>
 		</footer>
 	<?php $this->endBody() ?>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+   window.addEventListener('scroll', function() {
+      var news = document.getElementById('news');
+      var position = news.getBoundingClientRect();
+
+      // Проверяем, находится ли блок "Новости" в видимой части окна
+      if (position.top >= 0 && position.bottom <= window.innerHeight) {
+         news.classList.add('in-view');
+      } else {
+         news.classList.remove('in-view');
+      }
+   });
+});
+
+		</script>
 </body>
 
 </html>

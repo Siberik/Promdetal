@@ -1162,3 +1162,51 @@ text-align: center;
 .btn-primary:hover {
     background-color: #0056b3; /* Цвет фона при наведении курсора */
 }
+html {
+    scroll-behavior: smooth;
+ }
+ .laser-index {
+    text-align: center;
+    margin-top: 50px; /* Регулируйте отступ сверху по вашему усмотрению */
+}
+
+.page-title {
+    color: #333; /* Цвет заголовка */
+}
+
+.contact-form {
+    margin-top: 20px; /* Регулируйте отступ сверху формы по вашему усмотрению */
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    background-color: #007bff; /* Основной цвет кнопки */
+    color: #fff; /* Цвет текста на кнопке */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Анимация изменения цвета фона */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Цвет фона при наведении курсора */
+}
+#news {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+ }
+ 
+ #news.in-view {
+    opacity: 1;
+    transform: translateY(0);
+ }
+
+ 
+ 

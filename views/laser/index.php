@@ -10,41 +10,6 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use app\models\ApplicationForm;
 ?>
-<style>
-    .laser-index {
-        text-align: center;
-        margin-top: 50px; /* Регулируйте отступ сверху по вашему усмотрению */
-    }
-
-    .page-title {
-        color: #333; /* Цвет заголовка */
-    }
-
-    .contact-form {
-        margin-top: 20px; /* Регулируйте отступ сверху формы по вашему усмотрению */
-    }
-
-    .form-control {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-    }
-
-    .btn-primary {
-        background-color: #007bff; /* Основной цвет кнопки */
-        color: #fff; /* Цвет текста на кнопке */
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease; /* Анимация изменения цвета фона */
-    }
-
-    .btn-primary:hover {
-        background-color: #0056b3; /* Цвет фона при наведении курсора */
-    }
-
-</style>
 
 <main class="main">
 			<section class="hero section-offset">
@@ -106,7 +71,7 @@ use app\models\ApplicationForm;
 			</section>
 			<section class="news section-offset">
 				<div class="container">
-					<h2 class="section-title">Новости</h2>
+					<h2 class="section-title" id='news' >Новости</h2>
 					<div class="news-wrapper"><button class="btn-reset news-btn news-btn--prev"><svg><use xlink:href="images/sprite.svg#left"></use></svg></button>
 						<div class="news-slider swiper">
 							<div class="swiper-wrapper">
