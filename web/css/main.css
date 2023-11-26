@@ -1201,12 +1201,16 @@ html {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
- }
- 
- #news.in-view {
+}
+
+#news.in-view {
     opacity: 1;
     transform: translateY(0);
- }
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 
  

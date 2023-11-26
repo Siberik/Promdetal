@@ -65,7 +65,7 @@ CustomFontAsset::register($this);
 						<ul class="list-reset nav__list nav__list--footer">
 							<li class="nav__item nav__item--footer"><a href="#" class="nav__link nav__link--footer">Главная</a></li>
 							<li class="nav__item nav__item--footer"><a href="#" class="nav__link nav__link--footer">О предприятии</a></li>
-							<li class="nav__item nav__item--footer"><a href="#" class="nav__link nav__link--footer">Новости</a></li>
+							<li class="nav__item nav__item--footer"><a href="<?= Yii::$app->homeUrl ?>#news" class="nav__link nav__link--footer">Новости</a></li>
 							<li class="nav__item nav__item--footer"><a href="#" class="nav__link nav__link--footer">Продукция</a></li>
 			
 						</ul>
@@ -76,22 +76,8 @@ CustomFontAsset::register($this);
 			</div>
 		</footer>
 	<?php $this->endBody() ?>
-	<script>
-		document.addEventListener('DOMContentLoaded', function() {
-   window.addEventListener('scroll', function() {
-      var news = document.getElementById('news');
-      var position = news.getBoundingClientRect();
 
-      // Проверяем, находится ли блок "Новости" в видимой части окна
-      if (position.top >= 0 && position.bottom <= window.innerHeight) {
-         news.classList.add('in-view');
-      } else {
-         news.classList.remove('in-view');
-      }
-   });
-});
-
-		</script>
+	
 </body>
 
 </html>
