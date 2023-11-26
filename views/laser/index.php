@@ -107,7 +107,7 @@ use app\models\ApplicationForm;
 			<section class="news section-offset">
 				<div class="container">
 					<h2 class="section-title">Новости</h2>
-					<div class="news-wrapper"><button class="btn-reset news-btn news-btn--prev"><svg><use xlink:href="/images/sprite.svg#left"></use></svg></button>
+					<div class="news-wrapper"><button class="btn-reset news-btn news-btn--prev"><svg><use xlink:href="images/sprite.svg#left"></use></svg></button>
 						<div class="news-slider swiper">
 							<div class="swiper-wrapper">
 								

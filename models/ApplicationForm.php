@@ -18,4 +18,12 @@ class ApplicationForm extends Model
             ['email', 'email'],
         ];
     }
+    public function attributeLabels(){
+        return [
+            'name'=> 'Имя',
+            'email'=> 'Почта',
+            'phone'=> 'Номер телефона',
+                'message'=> 'Сообщение',];
+    }
+
 }

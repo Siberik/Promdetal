@@ -117,7 +117,7 @@ text-align: center;
 <div class="news-details">
     <h1 class="title"><?= Html::encode($this->title) ?></h1>
    
-    <p><?= $blog->text ?></p>
+    <p class="about__descr"><?= $blog->text ?></p>
     <!-- Другие детали новости, которые вы хотите отобразить -->
     
 </div>
