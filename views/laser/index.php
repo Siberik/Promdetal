@@ -97,9 +97,9 @@ use app\models\ApplicationForm;
 
 
 
-                    <div class="laser-index">
-                        <h1 class="page-title">Оставить заявку</h1>
-
+                    
+                        <h2 class="section-title" >Оставить заявку</h1>
+                        <div class="laser-index">
                         <?php if (!$formSubmitted): // Показываем форму только если она еще не была отправлена ?>
                             <?php $form = ActiveForm::begin(['options' => ['class' => 'contact-form']]); ?>
 

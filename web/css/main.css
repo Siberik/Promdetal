@@ -164,7 +164,7 @@ a {
 }
 
 .section-title {
-    margin: 0;
+    margin: -10 0 30 0;
     margin-bottom: var(--lg);
     font-weight: 700;
     font-size: 48px;
@@ -1167,7 +1167,7 @@ html {
  }
  .laser-index {
     text-align: center;
-    margin-top: 50px; /* Регулируйте отступ сверху по вашему усмотрению */
+    margin-top: 10px; /* Регулируйте отступ сверху по вашему усмотрению */
 }
 
 .page-title {
@@ -1175,7 +1175,7 @@ html {
 }
 
 .contact-form {
-    margin-top: 20px; /* Регулируйте отступ сверху формы по вашему усмотрению */
+    margin-top: 10px; /* Регулируйте отступ сверху формы по вашему усмотрению */
 }
 
 .form-control {
@@ -1208,5 +1208,5 @@ html {
     transform: translateY(0);
  }
 
- 
+
  
