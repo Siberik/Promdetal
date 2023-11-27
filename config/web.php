@@ -17,7 +17,6 @@ $config = [
     ],
     'components' => [
         'request' => [
-            // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'rabota',
         ],
         'cache' => [
@@ -38,19 +37,15 @@ $config = [
                 'host' => 'smtp.yandex.ru',
                 'username' => 'lolbagg@yandex.ru',
                 'password' => 'ndydvtrvlfhfpjfm',
-                'port' => '465',
-                'encryption' => 'ssl',
+                'port' => 587,
+                'encryption' => 'tls',
                 'streamOptions' => ['ssl' => ['verify_peer' => false, 'verify_peer_name' => false]],
             ],
             'messageConfig' => [
                 'charset' => 'UTF-8',
-                'from' => ['lolbagg@yandex.ru' => 'Владислав'], // Update the email address
+                'from' => ['lolbagg@yandex.ru' => 'Владислав'],
             ],
         ],
-
-
-
-
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
@@ -61,7 +56,6 @@ $config = [
             ],
         ],
         'db' => $db,
-        
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
@@ -70,27 +64,16 @@ $config = [
                 'laser/application-form' => 'laser/application-form',
             ],
         ],
-        
     ],
     'params' => $params,
-
-    ];
+];
 
 if (YII_ENV_DEV) {
-    // configuration adjustments for 'dev' environment
-    $config['bootstrap'][] = 'debug';
-    $config['modules']['debug'] = [
-        'class' => 'yii\debug\Module',
-        // uncomment the following to add your IP if you are not connecting from localhost.
-        'allowedIPs' => ['*'],
-    ];
-
-    $config['bootstrap'][] = 'gii';
-    $config['modules']['gii'] = [
-        'class' => 'yii\gii\Module',
-        // uncomment the following to add your IP if you are not connecting from localhost.
-        'allowedIPs' => ['*'],
-    ];
+    // Отключаем модули Debug и Gii в разработке
+    unset($config['bootstrap']);
+    unset($config['modules']['debug']);
+    unset($config['bootstrap']);
+    unset($config['modules']['gii']);
 }
 
 return $config;

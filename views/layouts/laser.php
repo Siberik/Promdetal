@@ -19,10 +19,11 @@ CustomFontAsset::register($this);
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<title><?= Html::encode($this->title) ?></title>
-
+	
 
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="theme-color" content="#111111">
+	
 	<?php $this->registerCsrfMetaTags() ?>
 	
 
