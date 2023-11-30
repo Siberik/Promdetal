@@ -5,11 +5,22 @@ namespace app\controllers;
 use app\models\ApplicationForm;
 use yii\web\Controller;
 use app\models\Blog;
+use app\models\City;
 use Yii;
 
 
 class LaserController extends Controller
 {
+    public function actionViewCity($id)
+    {
+        $city = City::findOne($id);
+
+        if (!$city) {
+            throw new \yii\web\NotFoundHttpException('Город не найден.');
+        }
+
+        return $this->render('viewCity', compact('city'));
+    }
     public function actionIndex()
     {
         $model = new ApplicationForm();
@@ -82,4 +93,7 @@ class LaserController extends Controller
             'model' => $model,
         ]);
     }
+    
+    
+    
 }

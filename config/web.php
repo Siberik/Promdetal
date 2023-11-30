@@ -62,6 +62,8 @@ $config = [
             'rules' => [
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
                 'laser/application-form' => 'laser/application-form',
+                'city/view/<id:\d+>' => 'city/view',
+
             ],
         ],
     ],
