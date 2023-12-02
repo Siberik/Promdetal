@@ -2610,4 +2610,33 @@
 
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    var newsLink = document.querySelector('.nav__link[href="<?= Yii::$app->homeUrl ?>#news"]');
+    
+    if (newsLink) {
+        newsLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            var targetElement = document.getElementById('news');
+            
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+
+        // Добавляем обработчик события scroll для проверки видимости блока "Новости"
+        window.addEventListener('scroll', function() {
+            var news = document.getElementById('news');
+            var position = news.getBoundingClientRect();
+
+            // Проверяем, находится ли блок "Новости" в видимой части окна
+            if (position.top >= 0 && position.bottom <= window.innerHeight) {
+                news.classList.add('in-view');
+            } else {
+                news.classList.remove('in-view');
+            }
+        });
+    }
+});
+
 

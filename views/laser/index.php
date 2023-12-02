@@ -10,7 +10,81 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use app\models\ApplicationForm;
 ?>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
 
+#preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+#status {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.spinner {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.double-bounce1, .double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #3498db;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+.double-bounce2 {
+    animation-delay: -1s;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+}
+
+  </style>
+  <div id="preloader">
+        <div id="status">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+    window.addEventListener("load", function () {
+        // После полной загрузки страницы показываем основной контент и скрываем прелоадер
+        document.getElementById('content').style.display = 'block';
+        document.getElementById('preloader').style.display = 'none';
+    });
+</script>
+<div id="content" style="display: none;">
 <main class="main">
 			<section class="hero section-offset">
 				<div class="container">
@@ -534,7 +608,7 @@ use app\models\ApplicationForm;
                             </div>
                         <?php endif; ?>
                     </div>
-
+                        </div>
                     <script>
                         // Добавляем скрипт для скрытия формы после успешной отправки
                         document.addEventListener("DOMContentLoaded", function () {
