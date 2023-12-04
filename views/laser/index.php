@@ -1,7 +1,7 @@
 <?php
 
 /* @var $this yii\web\View */
-
+/* @var $this \yii\web\View */
 $this->title = Yii::$app->name;
 ?>
 <?php
@@ -9,6 +9,8 @@ $this->title = Yii::$app->name;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use app\models\ApplicationForm;
+use kartik\form\ActiveFormAsset;
+
 ?>
 <style>
   body {
@@ -589,19 +591,24 @@ use app\models\ApplicationForm;
                     
                         <h2 class="section-title" >Оставить заявку</h1>
                         <div class="laser-index">
-                        <?php if (!$formSubmitted): // Показываем форму только если она еще не была отправлена ?>
-                            <?php $form = ActiveForm::begin(['options' => ['class' => 'contact-form']]); ?>
+                        <?php if (!$formSubmitted): ?>
+    <?php $form = ActiveForm::begin(['options' => ['class' => 'contact-form']]); ?>
 
-                            <?= $form->field($model, 'name')->textInput(['class' => 'form-control', 'placeholder' => 'Ваше имя']) ?>
-                            <?= $form->field($model, 'email')->textInput(['class' => 'form-control', 'placeholder' => 'Ваш Email']) ?>
-                            <?= $form->field($model, 'phone')->textInput(['class' => 'form-control', 'placeholder' => 'Ваш телефон']) ?>
-                            <?= $form->field($model, 'message')->textarea(['class' => 'form-control', 'rows' => 5, 'placeholder' => 'Ваше сообщение']) ?>
+    <?= $form->field($model, 'name')->textInput(['class' => 'form-control', 'placeholder' => 'Ваше имя']) ?>
+    <?= $form->field($model, 'email')->textInput(['class' => 'form-control', 'placeholder' => 'Ваш email']) ?>
+    <?= $form->field($model, 'phone')->textInput([
+        'class' => 'form-control',
+        'placeholder' => 'Ваш телефон',
+        'oninput' => 'formatPhoneNumber(this)',
+    ]) ?>
+    <?= $form->field($model, 'message')->textarea(['class' => 'form-control', 'rows' => 5, 'placeholder' => 'Ваше сообщение']) ?>
 
-                            <div class="form-group">
-                                <?= Html::submitButton('Отправить', ['class' => 'btn btn-primary', 'id' => 'submitBtn']) ?>
-                            </div>
+    <div class="form-group">
+        <?= Html::submitButton('Send', ['class' => 'btn btn-primary', 'id' => 'submitBtn']) ?>
+    </div>
 
-                            <?php ActiveForm::end(); ?>
+    <?php ActiveForm::end(); ?>
+
                         <?php else: // Показываем сообщение об успешной отправке ?>
                             <div class="success-message">
                                 <p>Ваша заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.</p>
@@ -609,6 +616,23 @@ use app\models\ApplicationForm;
                         <?php endif; ?>
                     </div>
                         </div>
+                        <script>
+function formatPhoneNumber(input) {
+    // Remove non-numeric characters from the input
+    var phoneNumber = input.value.replace(/\D/g, '');
+
+    // Limit the maximum number of digits (e.g., 10 digits for a phone number)
+    if (phoneNumber.length > 11) {
+        phoneNumber = phoneNumber.slice(0, 11);
+    }
+
+    // Update the input value with the cleaned and formatted phone number
+    input.value = phoneNumber;
+}
+</script>
+
+
+
                     <script>
                         // Добавляем скрипт для скрытия формы после успешной отправки
                         document.addEventListener("DOMContentLoaded", function () {

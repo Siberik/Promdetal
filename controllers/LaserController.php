@@ -25,6 +25,10 @@ class LaserController extends Controller
     {
         $model = new ApplicationForm();
         $formSubmitted = false;
+        if ($model->load(Yii::$app->request->post()) && $model->login()) {
+            return $this->redirect(['/laser/welcome']);
+        }
+    
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             // Отправка письма
             Yii::$app->mailer->compose()
@@ -50,7 +54,10 @@ class LaserController extends Controller
         return $this->render('index', compact('blogs', 'model', 'formSubmitted'));
     }
 
-
+    public function actionWelcome()
+    {
+        return $this->render('welcome');
+    }
     public function actionView($id)
     {
         // Найти новость по идентификатору

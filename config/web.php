@@ -23,8 +23,10 @@ $config = [
             'class' => 'yii\caching\FileCache',
         ],
         'user' => [
-            'identityClass' => 'app\models\User',
-            'enableAutoLogin' => true,
+            'identityClass' => 'app\models\UserI',
+            'enableAutoLogin' => false,
+            'loginUrl' => ['/site/login'],
+        'on afterLogin' => ['app\controllers\SiteController', 'afterLogin'], // Добавляем обработчик события
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -63,6 +65,7 @@ $config = [
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
                 'laser/application-form' => 'laser/application-form',
                 'city/view/<id:\d+>' => 'city/view',
+                'site/welcome' => 'site/welcome',
 
             ],
         ],
@@ -71,11 +74,16 @@ $config = [
 ];
 
 if (YII_ENV_DEV) {
-    // Отключаем модули Debug и Gii в разработке
-    unset($config['bootstrap']);
+    // Отключаем модуль Debug в разработке
     unset($config['modules']['debug']);
-    unset($config['bootstrap']);
-    unset($config['modules']['gii']);
+
+    // Включаем Gii
+    $config['modules']['gii'] = [
+        'class' => 'yii\gii\Module',
+        // other Gii configurations if needed
+    ];
 }
 
 return $config;
+
+
