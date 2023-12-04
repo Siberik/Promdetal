@@ -3,32 +3,17 @@
 namespace app\controllers;
 
 use app\models\ApplicationForm;
-use yii\web\Controller;
 use app\models\Blog;
-use app\models\City;
 use Yii;
-
+use yii\web\Controller;
 
 class LaserController extends Controller
 {
-    public function actionViewCity($id)
-    {
-        $city = City::findOne($id);
-
-        if (!$city) {
-            throw new \yii\web\NotFoundHttpException('Город не найден.');
-        }
-
-        return $this->render('viewCity', compact('city'));
-    }
     public function actionIndex()
     {
         $model = new ApplicationForm();
         $formSubmitted = false;
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->redirect(['/laser/welcome']);
-        }
-    
+
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             // Отправка письма
             Yii::$app->mailer->compose()
@@ -44,26 +29,28 @@ class LaserController extends Controller
                 )
                 ->send();
 
+            // Сохранение заявки в базе данных
+           // $model->save();
+
             // Дополнительные действия после отправки, например, перенаправление пользователя
             $formSubmitted = true;
         }
-
-
 
         $blogs = Blog::find()->all();
         return $this->render('index', compact('blogs', 'model', 'formSubmitted'));
     }
 
+    // Другие методы контроллера...
+
     public function actionWelcome()
     {
         return $this->render('welcome');
     }
+
     public function actionView($id)
     {
-        // Найти новость по идентификатору
         $blog = Blog::findOne($id);
 
-        // Проверка наличия новости
         if (!$blog) {
             throw new \yii\web\NotFoundHttpException('Страница не найдена.');
         }
@@ -81,7 +68,6 @@ class LaserController extends Controller
         $model = new ApplicationForm();
 
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
-            // Отправка заявки на почту
             Yii::$app->mailer->compose()
                 ->setTo('lolgagr@gmail.com')
                 ->setFrom([$model->email => $model->name])
@@ -89,18 +75,12 @@ class LaserController extends Controller
                 ->setTextBody($model->message)
                 ->send();
 
-            // Сохранение заявки в базе данных (если необходимо)
-            // $model->save();
-
-            Yii::$app->session->setFlash('success', 'Заявка успешно отправлена!');
-            return $this->refresh();
+            $formSubmitted = true;
         }
 
         return $this->render('applicationForm', [
             'model' => $model,
+            'formSubmitted' => $formSubmitted,
         ]);
     }
-    
-    
-    
 }
