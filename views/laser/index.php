@@ -115,11 +115,11 @@ use app\models\ApplicationForm;
 					<ul class="list-reset products__list grid">
 						<li class="products__item">
 							<div class="products-card"><img src="https://promdetal-ek.ru/wp-content/uploads/2020/12/1-fe-150x150.jpg" srcset="https://promdetal-ek.ru/wp-content/uploads/2020/12/1-fe-150x150.jpg" alt="Лазерная резка неметаллов" width="200" loading="lazy" class="products-card__image">
-								<h3 class="products-card__title">Лазерная резка металла</h3><a href="#" class="products-card__link">Подробнее <svg><use xlink:href="/images/sprite.svg#angle"></use></svg></a></div>
+								<h3 class="products-card__title">Лазерная резка металла</h3><a href="<?= Yii::$app->urlManager->createUrl(['laser/product', 'id' => 1]) ?>" class="products-card__link">Подробнее <svg><use xlink:href="/images/sprite.svg#angle"></use></svg></a></div>
 						</li>
 						<li class="products__item">
 							<div class="products-card"><img src="https://promdetal-ek.ru/wp-content/uploads/2020/12/1-fanera-150x150.jpg" srcset="https://promdetal-ek.ru/wp-content/uploads/2020/12/1-fanera-150x150.jpg" alt="Лазерная резка неметаллов" width="200" loading="lazy" class="products-card__image">
-								<h3 class="products-card__title">Лазерная резка неметаллов</h3><a href="#" class="products-card__link">Подробнее <svg><use xlink:href="/images/sprite.svg#angle"></use></svg></a></div>
+								<h3 class="products-card__title">Лазерная резка неметаллов</h3><a href="<?= Yii::$app->urlManager->createUrl(['laser/product', 'id' => 2]) ?>" class="products-card__link">Подробнее <svg><use xlink:href="/images/sprite.svg#angle"></use></svg></a></div>
 						</li>
 						<li class="products__item">
 							<div class="products-card"><img src="https://promdetal-ek.ru/wp-content/uploads/2020/12/2-truba-150x150.jpg" srcset="https://promdetal-ek.ru/wp-content/uploads/2020/12/2-truba-150x150.jpg" alt="Лазерная резка труб" width="200" loading="lazy" class="products-card__image">

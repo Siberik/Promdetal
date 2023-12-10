@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\models\ApplicationForm;
 use app\models\Blog;
+use app\models\Product; // Добавлено для работы с моделью Product
 use Yii;
 use yii\web\Controller;
 
@@ -30,7 +31,7 @@ class LaserController extends Controller
                 ->send();
 
             // Сохранение заявки в базе данных
-           // $model->save();
+            // $model->save();
 
             // Дополнительные действия после отправки, например, перенаправление пользователя
             $formSubmitted = true;
@@ -39,8 +40,6 @@ class LaserController extends Controller
         $blogs = Blog::find()->all();
         return $this->render('index', compact('blogs', 'model', 'formSubmitted'));
     }
-
-    // Другие методы контроллера...
 
     public function actionWelcome()
     {
@@ -66,6 +65,7 @@ class LaserController extends Controller
     public function actionApplicationForm()
     {
         $model = new ApplicationForm();
+        $formSubmitted = false;
 
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             Yii::$app->mailer->compose()
@@ -82,5 +82,16 @@ class LaserController extends Controller
             'model' => $model,
             'formSubmitted' => $formSubmitted,
         ]);
+    }
+
+    public function actionProduct($id)
+    {
+        $product = Product::findOne($id);
+
+        if (!$product) {
+            throw new \yii\web\NotFoundHttpException('Продукт не найден.');
+        }
+
+        return $this->render('product', compact('product'));
     }
 }
