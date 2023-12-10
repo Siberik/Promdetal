@@ -101,12 +101,12 @@ use app\models\ApplicationForm;
 						<p class="about__descr">Спектр предоставляемых услуг нашей компании довольно обширен: от стандартной лазерной резки до выполнения сложнейших заказов по индивидуально составленным чертежам, изготовления изделий и конструкций для применения в наружной рекламе, оформления интерьера, а так же эксклюзивных нестандартных изделий и изделий производственного назначения.</p>
 						<p class="about__descr">Для этого имеется современное оборудование швейцарской фирмы «Bystronic», станок Bystar 3015, позволяющий обрабатывать не только плоские заготовки, но и быстро обрабатывать объемные детали, в частности круглые трубы. Даже при лазерной резке толстых листовых материалов обеспечивается первоклассные параметры с минимальными временными затратами и экономией материала.</p>
 					</div>
-					<div class="about__images grid">
-            <img src="/images/laser-1.jpg" srcset="/images/laser-1.jpg" loading="lazy" alt="Лазерная резка 1" width="520" height="180" class="about__image"> 
-            
-            <img src="/images/laser-2.jpg" srcset="/images/laser-2.jpg" loading="lazy" overflow="hidden" alt="Лазерная резка 2" width="520" height="180" class="about__image">
-          
-          </div>
+          <div class="about__images grid">
+    <img src="<?= Yii::$app->homeUrl ?>/images/laser-1.jpg" srcset="<?= Yii::$app->homeUrl ?>/images/laser-1.jpg" loading="lazy" alt="Лазерная резка 1" width="520" height="180" class="about__image"> 
+
+    <img src="<?= Yii::$app->homeUrl ?>/images/laser-2.jpg" srcset="<?= Yii::$app->homeUrl ?>/images/laser-2.jpg" loading="lazy" overflow="hidden" alt="Лазерная резка 2" width="520" height="180" class="about__image">
+</div>
+
 				</div>
 			</section>
 			<section class="products section-offset">
@@ -561,7 +561,7 @@ use app\models\ApplicationForm;
 			<section class="news section-offset">
 				<div class="container">
 					<h2 class="section-title" id='news' >Новости</h2>
-					<div class="news-wrapper"><button class="btn-reset news-btn news-btn--prev"><svg><use xlink:href="images/sprite.svg#left"></use></svg></button>
+					<div class="news-wrapper"><button class="btn-reset news-btn news-btn--prev"><svg><use xlink:href="<?= Yii::$app->homeUrl ?>/images/sprite.svg#left"></use></svg></button>
 						<div class="news-slider swiper">
 							<div class="swiper-wrapper">
 								
@@ -570,7 +570,7 @@ use app\models\ApplicationForm;
 							<?php foreach ($blogs as $blog): ?>
     <div class="swiper-slide">
         <article class="news-card">
-            <img src="/images/news-3.jpg" srcset="/images/news-3_2x.jpg 2x" loading="lazy" width="380" height="251" alt="Новость 3" class="news-card__image">
+            <img src="<?= Yii::$app->homeUrl ?>/images/news-3.jpg" srcset="<?= Yii::$app->homeUrl ?>/images/news-3_2x.jpg 2x" loading="lazy" width="380" height="251" alt="Новость 3" class="news-card__image">
             <div class="news-card__inner">
                 <h3 class="news-card__title"><?= $blog->name ?></h3>
                 <div class="news-card__bottom">
@@ -582,7 +582,7 @@ use app\models\ApplicationForm;
 <?php endforeach; ?>
 
 							</div>
-						</div><button class="btn-reset news-btn news-btn--next"><svg><use xlink:href="/images/sprite.svg#right"></use></svg></button></div>
+						</div><button class="btn-reset news-btn news-btn--next"><svg><use xlink:href="<?= Yii::$app->homeUrl ?>/images/sprite.svg#right"></use></svg></button></div>
 
 
 

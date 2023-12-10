@@ -11,7 +11,7 @@
 
 </div>
 <h2 class="title_us">Коротко о  предприятии</h2>
-<img src="/images/hero.jpg" srcset="/images/hero_2x.jpg 2x" alt="Промдеталь - предприятие лазерной резки" width="1180" height="440" class="hero__image"></div>
+<img src="<?= Yii::$app->homeUrl ?>/images/hero.jpg" srcset="<?= Yii::$app->homeUrl ?>/images/hero_2x.jpg 2x" alt="Промдеталь - предприятие лазерной резки" width="1180" height="440" class="hero__image"></div>
 
 <section class="about section-offset">
     <div class="container">
