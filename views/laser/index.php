@@ -3,6 +3,17 @@
 /* @var $this yii\web\View */
 
 $this->title = Yii::$app->name;
+   // Мета-теги
+  
+   $this->registerMetaTag(['name' => 'description', 'content' => 'Лазерная резка металла на заказ']);
+   $this->registerMetaTag(['name' => 'keywords', 'content' => 'лазерная резка, металл, заказ, промдеталь, гравировка, лазерная резка дерева, лазерная гравировка,промышленная лазерная резка, лазерная резка на заказ, металлобработка, промдеталь екатеринбург, лазерная резка деталей, обработка металла, резка металла, ЧПУ']);
+   $this->registerLinkTag(['rel' => 'canonical', 'href' => Yii::$app->request->absoluteUrl]);
+   $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, initial-scale=1']);
+
+   $this->registerMetaTag(['property' => 'og:title', 'content' => $this->title]);
+   $this->registerMetaTag(['property' => 'og:description', 'content' => 'Лазерная резка металла на заказ']);
+   $this->registerMetaTag(['property' => 'og:image', 'content' => 'URL вашего изображения']);
+   $this->registerMetaTag(['property' => 'og:url', 'content' => Yii::$app->request->absoluteUrl]);
 ?>
 <?php
 
@@ -123,15 +134,15 @@ use app\models\ApplicationForm;
 						</li>
 						<li class="products__item">
 							<div class="products-card"><img src="https://promdetal-ek.ru/wp-content/uploads/2020/12/2-truba-150x150.jpg" srcset="https://promdetal-ek.ru/wp-content/uploads/2020/12/2-truba-150x150.jpg" alt="Лазерная резка труб" width="200" loading="lazy" class="products-card__image">
-								<h3 class="products-card__title">Лазерная резка труб</h3><a href="#" class="products-card__link">Подробнее <svg><use xlink:href="/images/sprite.svg#angle"></use></svg></a></div>
+								<h3 class="products-card__title">Лазерная резка труб</h3><a href="<?= Yii::$app->urlManager->createUrl(['laser/product', 'id' => 3]) ?>" class="products-card__link">Подробнее <svg><use xlink:href="/images/sprite.svg#angle"></use></svg></a></div>
 						</li>
 						<li class="products__item">
 							<div class="products-card"><img src="https://promdetal-ek.ru/wp-content/uploads/2020/12/1-gravirovka-150x150.jpg" srcset="https://promdetal-ek.ru/wp-content/uploads/2020/12/1-gravirovka-150x150.jpg" alt="Лазерная гравировка" width="200" loading="lazy" class="products-card__image">
-								<h3 class="products-card__title">Лазерная гравировка</h3><a href="#" class="products-card__link">Подробнее <svg><use xlink:href="/images/sprite.svg#angle"></use></svg></a></div>
+								<h3 class="products-card__title">Лазерная гравировка</h3><a href="<?= Yii::$app->urlManager->createUrl(['laser/product', 'id' => 4]) ?>" class="products-card__link">Подробнее <svg><use xlink:href="/images/sprite.svg#angle"></use></svg></a></div>
 						</li>
 						<li class="products__item">
 							<div class="products-card"><img src="https://promdetal-ek.ru/wp-content/uploads/2020/12/1-gibka-150x150.jpg" srcset="https://promdetal-ek.ru/wp-content/uploads/2020/12/1-gibka-150x150.jpg" alt="Гибка" width="200" loading="lazy" class="products-card__image">
-								<h3 class="products-card__title">Гибка</h3><a href="#" class="products-card__link">Подробнее <svg><use xlink:href="/images/sprite.svg#angle"></use></svg></a></div>
+								<h3 class="products-card__title">Гибка</h3><a href="<?= Yii::$app->urlManager->createUrl(['laser/product', 'id' => 5]) ?>" class="products-card__link">Подробнее <svg><use xlink:href="/images/sprite.svg#angle"></use></svg></a></div>
 						</li>
 					
 					</ul>

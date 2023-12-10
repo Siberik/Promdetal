@@ -16,31 +16,25 @@ class LaserController extends Controller
         $formSubmitted = false;
 
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
-            // Отправка письма
+            // Обработка формы
             Yii::$app->mailer->compose()
-                ->setTo('lolgagr@gmail.com') // Замените на свой почтовый адрес
-                ->setFrom(['lolbagg@yandex.ru' => 'Новая заявка'])
+                ->setTo('lolgagr@gmail.com')
+                ->setFrom([$model->email => $model->name])
                 ->setSubject('Новая заявка')
-                ->setTextBody(
-                    "Вам поступил новый заказ:\n" .
-                    "Имя: {$model->name}\n" .
-                    "Почта: {$model->email}\n" .
-                    "Телефон: {$model->phone}\n" .
-                    "Сообщение: {$model->message}"
-                )
+                ->setTextBody($model->message)
                 ->send();
 
-            // Сохранение заявки в базе данных
-            // $model->save();
-
-            // Дополнительные действия после отправки, например, перенаправление пользователя
+            // Дополнительные действия после отправки формы
             $formSubmitted = true;
         }
 
         $blogs = Blog::find()->all();
+
+     
+        
+
         return $this->render('index', compact('blogs', 'model', 'formSubmitted'));
     }
-
     public function actionWelcome()
     {
         return $this->render('welcome');

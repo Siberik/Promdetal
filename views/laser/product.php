@@ -7,12 +7,17 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <style>
-    .product-slider-container {
-        position: relative;
-        max-width: 90%; /* Ширина слайдера 90% от страницы */
-        margin: auto;
-        margin-bottom: 20px; /* Отступ снизу на 20 пикселей */
-    }
+.product-slider-container {
+    position: relative;
+    max-width: 1200px;
+    height: 500px;
+    margin: auto;
+    margin-bottom: 20px;
+    overflow: hidden; /* Скрыть изображения, выходящие за пределы слайдера */
+}
+
+
+
 
     .product-slider {
         overflow: hidden; /* Скрыть изображения, выходящие за пределы слайдера */
@@ -29,8 +34,11 @@ $this->params['breadcrumbs'][] = $this->title;
     }
 
     .slide img {
-        width: 100%; /* Растягиваем изображение на всю ширину слайда */
-    }
+    width: 100%;
+    height: 100%;
+    
+}
+
 
     .arrow-container {
         position: absolute;
