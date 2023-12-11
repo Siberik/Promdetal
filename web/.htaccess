@@ -1,6 +1,9 @@
-RewriteEngine On RewriteBase /
-     
+RewriteEngine On 
+RewriteBase /
+
+# Добавьте следующую строку, чтобы разрешить доступ к sitemap.xml
+RewriteRule ^sitemap\.xml$ - [L]
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
- 
 RewriteRule . index.php

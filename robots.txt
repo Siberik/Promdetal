@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /web/site/login
+Disallow: /web/site/welcome
+Allow: /web/laser/company
+Allow:/web/laser/index
