@@ -35,11 +35,8 @@ class LaserController extends Controller
 
         return $this->render('index', compact('blogs', 'model', 'formSubmitted'));
     }
-    public function actionWelcome()
-    {
-        return $this->render('welcome');
-    }
-
+   
+   
     public function actionView($id)
     {
         $blog = Blog::findOne($id);

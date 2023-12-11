@@ -48,9 +48,15 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="site-welcome">
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>
-        <?= Html::a('Добавить новую статью', ['site/edit-blog'], ['class' => 'btn btn-success']) ?>
-    </p>
+    <?php
+    // Проверяем, аутентифицирован ли пользователь
+    if (!Yii::$app->user->isGuest) {
+        echo Html::a('Добавить новую статью', ['site/edit-blog'], ['class' => 'btn btn-success']);
+        echo Html::a('Выйти', ['site/logout'], ['class' => 'btn btn-danger', 'data' => ['method' => 'post']]);
+
+
+    }
+    ?>
 
     <?php
     $itemsPerColumn = 5; // Максимальное количество статей в одном столбце
@@ -72,14 +78,19 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="blog-item well">
             <h2><?= Html::encode($blog->name) ?></h2>
             <p><?= Html::encode($blog->description) ?></p>
-            <?= Html::a('Редактировать', ['site/edit-blog', 'id' => $blog->id], ['class' => 'btn btn-primary']) ?>
-            <?= Html::a('Удалить', ['site/delete-blog', 'id' => $blog->id], [
-                'class' => 'btn btn-danger',
-                'data' => [
-                    'confirm' => 'Вы уверены, что хотите удалить эту статью?',
-                    'method' => 'post',
-                ],
-            ]) ?>
+            <?php
+            // Проверяем, аутентифицирован ли пользователь
+            if (!Yii::$app->user->isGuest) {
+                echo Html::a('Редактировать', ['site/edit-blog', 'id' => $blog->id], ['class' => 'btn btn-primary']);
+                echo Html::a('Удалить', ['site/delete-blog', 'id' => $blog->id], [
+                    'class' => 'btn btn-danger',
+                    'data' => [
+                        'confirm' => 'Вы уверены, что хотите удалить эту статью?',
+                        'method' => 'post',
+                    ],
+                ]);
+            }
+            ?>
         </div>
         <?php
     }

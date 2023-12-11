@@ -23,7 +23,7 @@ class SiteController extends Controller
     {
         return [
             'access' => [
-                'class' => AccessControl::className(),
+                'class' => AccessControl::class,
                 'only' => ['logout', 'welcome'],
                 'rules' => [
                     [
@@ -39,12 +39,12 @@ class SiteController extends Controller
                     [
                         'actions' => ['edit-blog', 'delete-blog'],
                         'allow' => true,
-                        'roles' => ['@'], 
+                        'roles' => ['@'],
                     ],
                 ],
             ],
             'verbs' => [
-                'class' => VerbFilter::className(),
+                'class' => VerbFilter::class,
                 'actions' => [
                     'logout' => ['post'],
                 ],
@@ -74,34 +74,35 @@ class SiteController extends Controller
     public function init()
     {
         parent::init();
-    
-        $this->on(\yii\web\User::EVENT_AFTER_LOGIN, [self::class, 'afterLogin']);
+
+        // Attach afterLogin as an instance method to EVENT_AFTER_LOGIN
+        Yii::$app->user->on(\yii\web\User::EVENT_AFTER_LOGIN, [$this, 'afterLogin']);
     }
-    
+
     public function actionEditBlog($id = null)
-{
-    $model = $id ? Blog::findBlogById($id) : new Blog();
+    {
+        $model = $id ? Blog::findBlogById($id) : new Blog();
 
-    if (Yii::$app->request->post('Blog')) {
-        $model->load(Yii::$app->request->post());
-        if ($model->saveBlog()) {
-            Yii::$app->session->setFlash('success', 'Статья успешно сохранена.');
-            return $this->redirect(['site/welcome']);
+        if (Yii::$app->request->post('Blog')) {
+            $model->load(Yii::$app->request->post());
+            if ($model->saveBlog()) {
+                Yii::$app->session->setFlash('success', 'Статья успешно сохранена.');
+                return $this->redirect(['site/welcome']);
+            }
         }
+
+        return $this->render('editBlog', ['model' => $model]);
     }
 
-    return $this->render('editBlog', ['model' => $model]);
-}
-
-public function actionDeleteBlog($id)
-{
-    $model = Blog::findBlogById($id);
-    if ($model) {
-        $model->deleteBlog();
-        Yii::$app->session->setFlash('success', 'Статья успешно удалена.');
+    public function actionDeleteBlog($id)
+    {
+        $model = Blog::findBlogById($id);
+        if ($model) {
+            $model->deleteBlog();
+            Yii::$app->session->setFlash('success', 'Статья успешно удалена.');
+        }
+        return $this->redirect(['site/welcome']);
     }
-    return $this->redirect(['site/welcome']);
-}
 
     /**
      * Handle the afterLogin event.
@@ -113,21 +114,19 @@ public function actionDeleteBlog($id)
         $user = Yii::$app->user->identity;
         $loginTime = Yii::$app->formatter->asDatetime(time());
         $ip = Yii::$app->getRequest()->getUserIP();
-    
+
         $subject = 'Вход Администратора';
         $body = "В $loginTime вошел администратор с логином $user->username\n\nIP входа: $ip";
-    
+
         Yii::$app->mailer->compose()
             ->setTo('lolgagr@gmail.com') // Замените на ваш адрес электронной почты
             ->setSubject($subject)
             ->setTextBody($body)
             ->send();
-    
-        Yii::$app->response->redirect(['site/welcome']);
-    }
-    
-    
 
+        // Редирект внутри контроллера
+        Yii::$app->getResponse()->redirect(['site/welcome']);
+    }
 
     /**
      * Displays homepage.
@@ -215,8 +214,7 @@ public function actionDeleteBlog($id)
                 'pageSize' => 15, // Установите желаемый размер страницы
             ],
         ]);
-    
+
         return $this->render('welcome', ['dataProvider' => $dataProvider]);
     }
-    
 }
