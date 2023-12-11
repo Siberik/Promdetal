@@ -110,23 +110,23 @@ class SiteController extends Controller
      * @param UserEvent $event
      */
     public static function afterLogin($event)
-    {
-        $user = Yii::$app->user->identity;
-        $loginTime = Yii::$app->formatter->asDatetime(time());
-        $ip = Yii::$app->getRequest()->getUserIP();
+{
+    $user = Yii::$app->user->identity;
+    $loginTime = Yii::$app->formatter->asDatetime(time());
+    $ip = Yii::$app->getRequest()->getUserIP();
 
-        $subject = 'Вход Администратора';
-        $body = "В $loginTime вошел администратор с логином $user->username\n\nIP входа: $ip";
+    $subject = 'Вход Администратора';
+    $body = "В $loginTime вошел администратор с логином $user->username\n\nIP входа: $ip";
 
-        Yii::$app->mailer->compose()
-            ->setTo('lolgagr@gmail.com') // Замените на ваш адрес электронной почты
-            ->setSubject($subject)
-            ->setTextBody($body)
-            ->send();
+    Yii::$app->mailer->compose()
+        ->setTo('lolgagr@gmail.com') // Замените на ваш адрес электронной почты
+        ->setSubject($subject)
+        ->setTextBody($body)
+        ->send();
 
-        // Редирект внутри контроллера
-        Yii::$app->getResponse()->redirect(['site/welcome']);
-    }
+    // Редирект внутри контроллера
+    return Yii::$app->getResponse()->redirect(['site/welcome']);
+}
 
     /**
      * Displays homepage.
