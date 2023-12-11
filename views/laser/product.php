@@ -7,68 +7,77 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <style>
-.product-slider-container {
+  .product-slider-container {
     position: relative;
     max-width: 1200px;
     height: 500px;
     margin: auto;
     margin-bottom: 20px;
     overflow: hidden; /* Скрыть изображения, выходящие за пределы слайдера */
-}
+  }
 
+  .product-slider {
+    overflow: hidden; /* Скрыть изображения, выходящие за пределы слайдера */
+  }
 
+  .slides-container {
+    display: flex; /* Располагаем слайды в ряд */
+    transition: transform 0.5s ease-in-out; /* Плавный переход между слайдами */
+  }
 
+  .slide {
+    flex: 0 0 100%; /* Ширина слайда равна ширине слайдера */
+    box-sizing: border-box; /* Исключаем границы и отступы из размера */
+  }
 
-    .product-slider {
-        overflow: hidden; /* Скрыть изображения, выходящие за пределы слайдера */
-    }
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-    .slides-container {
-        display: flex; /* Располагаем слайды в ряд */
-        transition: transform 0.5s ease-in-out; /* Плавный переход между слайдами */
-    }
+  .arrow-container {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1; /* Поднимаем блок со стрелками над слайдером */
+  }
 
-    .slide {
-        flex: 0 0 100%; /* Ширина слайда равна ширине слайдера */
-        box-sizing: border-box; /* Исключаем границы и отступы из размера */
+  .arrow {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+  }
+
+  .title {
+    margin: var(--lg) auto 20px;
+    font-weight: 700;
+    font-size: 36px; /* Уменьшен размер шрифта */
+    line-height: 120%;
+    color: var(--dark);
+    text-align: center;
+  }
+
+  .about__descr {
+    margin-bottom: 20px;
+  }
+
+  /* Добавим стили для мобильных устройств */
+  @media (max-width: 768px) {
+    .product-slider-container {
+      height: 100%; /* Устанавливаем высоту автоматически для мобильных устройств */
     }
 
     .slide img {
-    width: 100%;
-    height: 100%;
-    
-}
-
-
-    .arrow-container {
-        position: absolute;
-        top: 50%;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        z-index: 1; /* Поднимаем блок со стрелками над слайдером */
+      height: auto; /* Снимаем ограничение высоты для мобильных устройств */
     }
-
-    .arrow {
-        width: 30px;
-        height: 30px;
-        background-color: black;
-        color: white;
-        text-align: center;
-        line-height: 30px;
-        cursor: pointer;
-    }
-    .title {
-        margin: var(--lg) auto 20px;
-        font-weight: 700;
-        font-size: 36px; /* Уменьшен размер шрифта */
-        line-height: 120%;
-        color: var(--dark);
-        text-align: center;
-    }
-    .about__descr {
-        margin-bottom: 20px;
-    }
+  }
 </style>
 
 <div class="container">

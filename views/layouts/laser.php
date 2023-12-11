@@ -48,7 +48,7 @@ CustomFontAsset::register($this);
         <a class="nav__item"><a href="<?= Yii::$app->homeUrl ?>" class="nav__link">Главная</a></li>
         <li class="nav__item"><a href="<?= Yii::$app->urlManager->createUrl(['laser/company']) ?>" class="nav__link">О предприятии</a></li>
         <li class="nav__item"><a href="<?= Yii::$app->homeUrl ?>#news"  class="nav__link">Новости</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">Продукция</a></li>
+        <li class="nav__item"><a href="<?= Yii::$app->homeUrl ?>#product" class="nav__link">Продукция</a></li>
     </ul>
 </nav>
 					<div class="header__contact header__contact--mobile"><span class="header__caption">По вопросам и предложениям</span> <a href="mailto:pionerrr@sila.ru" class="header__link">promdetail@sila.ru</a></div>
@@ -64,10 +64,10 @@ CustomFontAsset::register($this);
 				<div class="footer__col footer__col--flex">
 					<nav class="nav" title="Второстепенное меню">
 						<ul class="list-reset nav__list nav__list--footer">
-							<li class="nav__item nav__item--footer"><a href="#" class="nav__link nav__link--footer">Главная</a></li>
-							<li class="nav__item nav__item--footer"><a href="#" class="nav__link nav__link--footer">О предприятии</a></li>
+							<li class="nav__item nav__item--footer"><a href="<?= Yii::$app->homeUrl ?>" class="nav__link nav__link--footer">Главная</a></li>
+							<li class="nav__item nav__item--footer"><a href="<?= Yii::$app->urlManager->createUrl(['laser/company']) ?>" class="nav__link nav__link--footer">О предприятии</a></li>
 							<li class="nav__item nav__item--footer"><a href="<?= Yii::$app->homeUrl ?>#news" class="nav__link nav__link--footer">Новости</a></li>
-							<li class="nav__item nav__item--footer"><a href="#" class="nav__link nav__link--footer">Продукция</a></li>
+							<li class="nav__item nav__item--footer"><a href="<?= Yii::$app->homeUrl ?>#product" class="nav__link nav__link--footer">Продукция</a></li>
 			
 						</ul>
 					</nav>

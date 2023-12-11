@@ -4,7 +4,7 @@
 
 $this->title = Yii::$app->name;
    // Мета-теги
-  
+  $this->registerMetaTag(['name' => 'yandex-verification', 'content' => '3b69f18be81a6d21']);
    $this->registerMetaTag(['name' => 'description', 'content' => 'Лазерная резка металла на заказ']);
    $this->registerMetaTag(['name' => 'keywords', 'content' => 'лазерная резка, металл, заказ, промдеталь, гравировка, лазерная резка дерева, лазерная гравировка,промышленная лазерная резка, лазерная резка на заказ, металлобработка, промдеталь екатеринбург, лазерная резка деталей, обработка металла, резка металла, ЧПУ']);
    $this->registerLinkTag(['rel' => 'canonical', 'href' => Yii::$app->request->absoluteUrl]);
@@ -12,7 +12,7 @@ $this->title = Yii::$app->name;
 
    $this->registerMetaTag(['property' => 'og:title', 'content' => $this->title]);
    $this->registerMetaTag(['property' => 'og:description', 'content' => 'Лазерная резка металла на заказ']);
-   $this->registerMetaTag(['property' => 'og:image', 'content' => 'URL вашего изображения']);
+   $this->registerMetaTag(['property' => 'og:image', 'content' => 'http://gubarev.tech/robots.txt']);
    $this->registerMetaTag(['property' => 'og:url', 'content' => Yii::$app->request->absoluteUrl]);
 ?>
 <?php
@@ -120,7 +120,7 @@ use app\models\ApplicationForm;
 
 				</div>
 			</section>
-			<section class="products section-offset">
+			<section class="products section-offset" id="product">
 				<div class="container">
 					<h2 class="section-title">Продукция</h2>
 					<ul class="list-reset products__list grid">
